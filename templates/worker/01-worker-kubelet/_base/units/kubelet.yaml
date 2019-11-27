@@ -24,6 +24,7 @@ contents: |
         --node-labels=node-role.kubernetes.io/worker,node.openshift.io/os_id=${ID} \
 {{- if .KubeletIPv6}}
         --node-ip :: \
+        --address :: \
 {{- end}}
         --minimum-container-ttl-duration=6m0s \
         --volume-plugin-dir=/etc/kubernetes/kubelet-plugins/volume/exec \
